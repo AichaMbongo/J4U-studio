@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    background-color: #f4f4f8;
+    color: #F0EEED;
+    /* font-family: "Shantell Sans", cursive;
+    font-size: 40px; */
+    text-transform: uppercase;
+    overflow-y: auto;
+  }
+  .description {
+    font-family: "Pacifico", cursive;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #ebdede;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color:transparent;
+    box-shadow: 0 0 10px #ff00ff,
+                0 0 20px #00ffff,
+                0 0 30px #ff0000,
+                0 0 40px #00ff00,
+                0 0 50px #0000ff;
+    animation: neon-border 1.5s linear infinite;
+  }
+  
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+  
+  }
+  
+  .card-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 12.5%;
+    overflow-y: auto hidden;
+    overflow-x: auto hidden;
+  
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 15%;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    
+    margin: 10%;
+    margin-top: 7%;
+    border-radius: 15%;
+  }  
+  
+  .card {
+    width: 250px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 0;
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+  
+  .front {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .front--1 {
+    background-image: url("https://i.pinimg.com/236x/a2/80/4e/a2804e7da7125e189340b60ab8d02883.jpg");
+  }
+  .front--2 {
+    background-image: url("https://i.pinimg.com/564x/93/85/77/938577078fd45de0f43adc28856321ca.jpg");
+  }
+  .front--3 {
+    background-image: url("https://i.pinimg.com/564x/8d/fa/a0/8dfaa063db064f1896b21a6e80239aa6.jpg");
+  }
+  .front--4 {
+    background-image: url("https://i.pinimg.com/564x/1b/d9/11/1bd9119fb587e01b22168f46503dde37.jpg");
+  }
+
+  .front--5 {
+    background-image: url("https://i.pinimg.com/564x/dc/cc/4f/dccc4f69c99f2492019345712f69f499.jpg");
+  }
+  
+  .front--6 {
+    background-image: url("https://i.pinimg.com/564x/28/1e/cc/281ecc2f47476ddd66de184547d6ce7a.jpg");
+  }
+  
+  .front--7 {
+    background-image: url("img/barber.jpeg");
+  }
+  
+  .front--8 {
+    background-image: url("https://i.pinimg.com/564x/1d/25/b1/1d25b198d3e11f7cf23e2ed24d0a8b75.jpg");
+  }
+  
+  
+  
+  .back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F236x%2Fdc%2F02%2F60%2Fdc026033a09d5067e2f1639ca8b3f287.jpg%3Fnii%3Dt&f=1&nofb=1&ipt=360d6d5cad14a22efb04400e369e8be3e999307088c2409b12b80ea214c694f1&ipo=images");
+  }
+  
+  .card:hover .front {
+    transform: rotateY(180deg);
+  }
+  .card:hover .back {
+    transform: rotateY(0);
+  }
+  
+  @media (max-width: 1200px) {
+    .card-container {
+      flex-wrap: wrap;
+    }
+  }

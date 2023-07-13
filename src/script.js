@@ -32,7 +32,16 @@ const body = document.querySelector("body"),
     boxModelImage = document.querySelector(".menu .box-model img"),
     pageTitle = document.querySelector("title");
 
-
+    function openModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block";
+      }
+      
+      function closeModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+      }
+      
     
 // remove loader
 function fadeOutEffect() {
